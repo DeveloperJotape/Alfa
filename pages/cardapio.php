@@ -1,3 +1,8 @@
+<?php
+
+include('../app/config/config.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,98 +21,28 @@
   include "../layout/banner.php";
   ?>
   <section class="cardapio mg">
+    <h2 class="text-center font-color-secundary">Cardápio</h2>
     <div class="container">
-      <!-- Primeira fileira -->
-      <div class="card-deck">
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-      </div>
+      <div class="row d-flex justify-content-center">
+        <?php
+        $query = "SELECT * FROM produtos ORDER BY id ASC";
+        $result = $conn->query($query);
 
-      <!-- Segunda fileira -->
-      <div class="card-deck mt-5">
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Terceira fileira -->
-      <div class="card-deck mt-5">
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
-        <div class="card bg-color-2 font-color" style="width: 18rem;">
-          <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-          <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p style="font-size:18px;">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-              conteúdo adicional.</p>
-            <h4 class="text-center mt-4">R$ 3,99</h4>
-          </div>
-        </div>
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_array($result)) {
+        ?>
+            <div class="card ml-4 mr-4 mt-3 mb-3 bg-color-2 font-color" style="width: 20rem;">
+              <img class="card-img-top" src="../images/<?php echo $row['imagem']; ?>" style="height: 15rem;" alt="<?php echo $row['descricao'] ?>">
+              <div class="card-body">
+                <h4 class="card-title"><?php echo $row['nome']; ?></h4>
+                <p style="font-size:18px;"><?php echo $row['descricao']; ?></p>
+                <h4 class="text-center mt-4">R$ <?php echo number_format($row['valor'], 2); ?></h4>
+              </div>
+            </div>
+        <?php
+          }
+        }
+        ?>
       </div>
     </div>
   </section>
