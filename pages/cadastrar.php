@@ -27,7 +27,7 @@
 		$result =  mysqli_query($conn, "INSERT INTO usuarios(usuario,senha,email,telefone) 
 									VALUES ('$usuario', '$senha', '$email', '$telefone')");
 
-		header('Location: entrar.php');							
+		header('Location: entrar.php');						
 
 		}
 	?>

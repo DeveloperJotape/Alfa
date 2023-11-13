@@ -13,6 +13,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link font-color"
 					href="../index.php">Home</a></li>
+					<li class="nav-item"><a class="nav-link font-color" href="../pages/cardapio.php">Cardápio</a></li>
 				<li class="nav-item"><a class="nav-link font-color" href="#">Planos</a></li>
 				<li class="nav-item"><a class="nav-link font-color"
 					href="../pages/entrar.php">Entrar</a></li>

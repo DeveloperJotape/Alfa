@@ -32,6 +32,7 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item"><a class="nav-link font-color"
 						href="index.jsp">Home</a></li>
+					<li class="nav-item"><a class="nav-link font-color" href="pages/cardapio.php">Cardápio</a></li>	
 					<li class="nav-item"><a class="nav-link font-color" href="#">Planos</a></li>
 					<li class="nav-item"><a class="nav-link font-color"
 						href="pages/entrar.php">Entrar</a></li>
@@ -212,8 +213,9 @@
 					<h6>Links Rápidos</h6>
 					<!-- Lista não ordenada com links para diferentes páginas -->
 					<ul class="list-unstyled">
-					<li><a href="index.php" class="link font-color">Página
+						<li><a href="index.php" class="link font-color">Página
 								Inicial</a></li>
+						<li><a href="pages/cardapio.php" class="link font-color">Cardápio</a></li>
 						<li><a href="#" class="link font-color">Planos</a></li>
 						<li><a href="pages/entrar.php" class="link font-color">Entrar</a></li>
 						<li><a href="pages/cadastrar.php" class="link font-color">Cadastrar</a></li>

@@ -4,7 +4,7 @@
 			data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active c-item">
-					<img class="d-block w-100 c-img" src="images/bg-image-1.jpg"
+					<img class="d-block w-100 c-img" src="../images/bg-image-1.jpg"
 						alt="Primeiro Slide">
 					<div class="carousel-caption d-none d-md-block">
 						<h1>Alfa Digital Development</h1>
@@ -14,7 +14,7 @@
 					</div>
 				</div>
 				<div class="carousel-item c-item">
-					<img class="d-block w-100 c-img" src="images/bg-image-2.jpg"
+					<img class="d-block w-100 c-img" src="../images/bg-image-2.jpg"
 						alt="Slide 2">
 					<div class="carousel-caption d-none d-md-block">
 						<h1>Alfa Digital Development</h1>
@@ -25,7 +25,7 @@
 					</div>
 				</div>
 				<div class="carousel-item c-item">
-					<img class="d-block w-100 c-img" src="images/bg-image-3.jpg"
+					<img class="d-block w-100 c-img" src="../images/bg-image-3.jpg"
 						alt="Slide 3">
 					<div class="carousel-caption d-none d-md-block">
 						<h1>Alfa Digital Development</h1>

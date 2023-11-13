@@ -17,6 +17,7 @@
 					<ul class="list-unstyled">
 						<li><a href="../index.php" class="link font-color">Página
 								Inicial</a></li>
+						<li><a href="../pages/cardapio.php" class="link font-color">Cardápio</a></li>
 						<li><a href="#" class="link font-color">Planos</a></li>
 						<li><a href="../pages/entrar.php" class="link font-color">Entrar</a></li>
 						<li><a href="../pages/cadastrar.php" class="link font-color">Cadastrar</a></li>
