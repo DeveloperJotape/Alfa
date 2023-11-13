@@ -6,6 +6,7 @@
 
 body {
 	background-color: #F1DEC9;
+	overflow-x: hidden;
 }
 
 /* ESTILOS GERAIS */
