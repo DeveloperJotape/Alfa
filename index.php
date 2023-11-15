@@ -33,7 +33,7 @@
 					<li class="nav-item"><a class="nav-link font-color"
 						href="index.jsp">Home</a></li>
 					<li class="nav-item"><a class="nav-link font-color" href="pages/cardapio.php">Cardápio</a></li>	
-					<li class="nav-item"><a class="nav-link font-color" href="#">Planos</a></li>
+					<li class="nav-item"><a class="nav-link font-color" href="pages/planos.php">Planos</a></li>
 					<li class="nav-item"><a class="nav-link font-color"
 						href="pages/entrar.php">Entrar</a></li>
 				</ul>

@@ -123,7 +123,9 @@ if (isset($_GET['action']) && $_GET['action'] == "delete") {
                     ?>
                     <div class="mt-5 text-center font-color">
                         <h4>Total: <?php echo number_format($total, 2) ?></h4>
-                        <input type="submit" name="finalizar" value="Finalizar Compra" class="btn-sec">
+                        <form method="post">
+                            <input type="submit" name="finalizar" value="Finalizar Compra" formaction="finalizar.php" class="btn-sec">
+                        </form>
                     </div>
                 </div>
             </div>
